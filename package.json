@@ -1,0 +1,21 @@
+{
+  "name": "task-management-api",
+  "version": "1.0.0",
+  "description": "Simple in-memory Task Management API built with Node.js and Express",
+  "main": "src/app.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "node --test"
+  },
+  "keywords": [],
+  "author": "Fatih Yuksekdag",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
