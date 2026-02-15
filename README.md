@@ -131,3 +131,29 @@ docker build -t task-api .
 Run container:
 
 docker run -p 3000:3000 task-api
+
+---
+
+## Architecture Overview
+
+Layered structure:
+- routes → HTTP routing
+- controllers → request/response handling
+- services → business logic + in-memory storage
+- middlewares → 404 + centralized error handling
+
+---
+
+## Approach
+
+Kept the scope minimal as requested, but structured the code for readability and maintainability.
+Added basic validation and error handling, plus a /health endpoint for service monitoring.
+
+---
+
+## Key Decisions
+
+- In-memory storage (as allowed in the case)
+- `completed` defaults to `false`
+- `createdAt` returned as ISO string
+- Optional filtering via `GET /tasks?completed=true|false`
